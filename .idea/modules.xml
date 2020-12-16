@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ucenter/ms-ucenter-app/ms-ucenter-app.iml" filepath="$PROJECT_DIR$/ucenter/ms-ucenter-app/ms-ucenter-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucenter/ms-ucenter-boot/ms-ucenter-boot.iml" filepath="$PROJECT_DIR$/ucenter/ms-ucenter-boot/ms-ucenter-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucenter/ms-ucenter-common/ms-ucenter-common.iml" filepath="$PROJECT_DIR$/ucenter/ms-ucenter-common/ms-ucenter-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucenter/ms-ucenter-dao/ms-ucenter-dao.iml" filepath="$PROJECT_DIR$/ucenter/ms-ucenter-dao/ms-ucenter-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucenter/ms-ucenter-feign/ms-ucenter-feign.iml" filepath="$PROJECT_DIR$/ucenter/ms-ucenter-feign/ms-ucenter-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucenter/ms-ucenter-service/ms-ucenter-service.iml" filepath="$PROJECT_DIR$/ucenter/ms-ucenter-service/ms-ucenter-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucenter/ms-ucenter-web/ms-ucenter-web.iml" filepath="$PROJECT_DIR$/ucenter/ms-ucenter-web/ms-ucenter-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upms/ms-upms-app/ms-upms-app.iml" filepath="$PROJECT_DIR$/upms/ms-upms-app/ms-upms-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upms/ms-upms-boot/ms-upms-boot.iml" filepath="$PROJECT_DIR$/upms/ms-upms-boot/ms-upms-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upms/ms-upms-common/ms-upms-common.iml" filepath="$PROJECT_DIR$/upms/ms-upms-common/ms-upms-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upms/ms-upms-dao/ms-upms-dao.iml" filepath="$PROJECT_DIR$/upms/ms-upms-dao/ms-upms-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upms/ms-upms-feign/ms-upms-feign.iml" filepath="$PROJECT_DIR$/upms/ms-upms-feign/ms-upms-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upms/ms-upms-service/ms-upms-service.iml" filepath="$PROJECT_DIR$/upms/ms-upms-service/ms-upms-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/upms/ms-upms-web/ms-upms-web.iml" filepath="$PROJECT_DIR$/upms/ms-upms-web/ms-upms-web.iml" />
+    </modules>
+  </component>
+</project>

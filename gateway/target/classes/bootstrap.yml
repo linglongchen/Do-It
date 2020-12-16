@@ -1,0 +1,153 @@
+# 从配置中心加载文件
+#spring:
+#  cloud:
+#    config:
+#      profile: dev
+#      label: master
+#      name: gateway
+#      uri: http://config:server@www.config.com:10000/
+#      # 实现配置中心的高可用
+#      discovery:
+#        service-id: config-server
+#        enabled: false
+#      username: config
+#      password: server
+##     从配置中心加载服务失败重试，此设置可以降低部署难度可以较好的支持docker部署，合理进行配置后，部署时应用启动顺序不会影响程序是否启动成功
+##     但会牺牲配置中心的高可用。在服务较少的时候可采用此配置。在微服务数量数量巨大时应选用配置中心高可用，按顺序启动微服务
+#      fail-fast: true
+#      retry:
+#        max-attempts: 30
+#        initial-interval: 2000
+#        multiplier: 1.18
+#        max-interval: 30000
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://micro:fast@www.register1.com:10002/eureka/,http://micro:fast@www.register2.com:10004/eureka/ #配置所有的注册中心
+  instance:
+    hostname: fthipw.natappfree.cc
+# 配置熔断监控的集群名称
+    metadata-map:
+      cluster: ms-gateway
+
+
+
+info:
+  app:
+    profiles: dev
+    name: gateway
+    description: gateway
+spring:
+  application:
+    name: gateway
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password : 123456
+  mvc:
+    view:
+      suffix: .html
+  # 消息总线
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+  # 向服务监控调用中心暴露端口
+  #  zipkin:
+  #    base-url: http://www.zipkin.com:10020
+  # 设置服务调用依赖检测的抽样率，默认为0.1.设置成1表示百分百抽样。方便开发调试
+  sleuth:
+    sampler:
+      percentage: 1
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size:
+      max-request-size:
+      enabled: true
+server:
+  port: 10006
+  tomcat:
+    uri-encoding: utf-8
+feign:
+  hystrix:
+    enabled: true #开启监控熔断
+# 健康检查的相关配置
+management:
+  health:
+    mail:
+      enabled: false
+    redis:
+      enabled: false
+  security:
+  server:
+    port: 10007
+# 服务服务网关的配置,静态资源的映射，以及微服务的映射以及隐藏
+zuul:
+  # 为请求设置host头信息,避免视图页面跳转到内部服务器的host上
+  addHostHeader: true
+  # 限流配置
+  ratelimit:
+    enabled: true
+    repository: REDIS
+    key-prefix: zuulRatelimit
+    behind-proxy: true
+    #    默认限流配置
+    default-policy-list:
+      - limit: 50
+        refresh-interval: 60
+        type:
+          - user
+          - origin
+      - limit: 50000
+        refresh-interval: 60
+        type:
+          - url
+    #     指定服务限流配置
+    policy-list:
+      - oauth:
+          - limit: 20
+            refresh-interval: 60
+            type:
+              - user
+              - origin
+          - limit: 50000
+            refresh-interval: 60
+            type:
+              - url
+  routes:
+    upms:
+      path: /upms/**
+      serviceId: upms
+    ucenter:
+      path: /ucenter/**
+      serviceId: ucenter
+    oauth:
+      #    保留请求头
+      sensitive-headers:
+      custom-sensitive-headers: true
+      path: /oauth/**
+      serviceId: oauth
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api/api-doc
+## 超时时间，方便调试
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+# 不需要登录校验的地址
+login:
+  notNeedLoginCheckPath:
+    - /oauth/user/login
+    - /oauth/code/**
+
+

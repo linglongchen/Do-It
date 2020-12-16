@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ms-upms-service" />
+        <module name="ms-ucenter-common" />
+        <module name="ms-upms-feign" />
+        <module name="ms-ucenter-service" />
+        <module name="ms-ucenter-app" />
+        <module name="register-center1" />
+        <module name="register-center2" />
+        <module name="ms-ucenter-web" />
+        <module name="ms-ucenter-dao" />
+        <module name="boot-starter-security-oauth" />
+        <module name="boot-starter-elasticsearch" />
+        <module name="monitor-zipkin" />
+        <module name="boot-starter-common" />
+        <module name="oauth" />
+        <module name="ms-upms-boot" />
+        <module name="monitor-turbine" />
+        <module name="ms-upms-app" />
+        <module name="config-server" />
+        <module name="boot-starter-util" />
+        <module name="ms-ucenter-feign" />
+        <module name="ms-ucenter-boot" />
+        <module name="ms-upms-web" />
+        <module name="ms-upms-dao" />
+        <module name="ms-upms-common" />
+        <module name="gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin" target="1.8" />
+      <module name="auth" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="ms-ucenter-app" target="1.5" />
+      <module name="ms-ucenter-boot" target="1.5" />
+      <module name="ms-ucenter-common" target="1.5" />
+      <module name="ms-ucenter-dao" target="1.5" />
+      <module name="ms-ucenter-feign" target="1.5" />
+      <module name="ms-ucenter-service" target="1.5" />
+      <module name="ms-ucenter-web" target="1.5" />
+      <module name="ms-upms-app" target="1.5" />
+      <module name="ms-upms-boot" target="1.5" />
+      <module name="ms-upms-common" target="1.5" />
+      <module name="ms-upms-dao" target="1.5" />
+      <module name="ms-upms-feign" target="1.5" />
+      <module name="ms-upms-service" target="1.5" />
+      <module name="ms-upms-web" target="1.8" />
+      <module name="registry" target="1.8" />
+      <module name="ucenter" target="1.8" />
+      <module name="upms" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="admin" options="-parameters" />
+      <module name="auth" options="-parameters" />
+      <module name="boot-starter-common" options="-parameters" />
+      <module name="boot-starter-elasticsearch" options="-parameters" />
+      <module name="boot-starter-security-oauth" options="-parameters" />
+      <module name="boot-starter-util" options="-parameters" />
+      <module name="common" options="-parameters" />
+      <module name="config-server" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="monitor-turbine" options="-parameters" />
+      <module name="monitor-zipkin" options="-parameters" />
+      <module name="ms-upms-web" options="-parameters" />
+      <module name="oauth" options="-parameters" />
+      <module name="register-center1" options="-parameters" />
+      <module name="register-center2" options="-parameters" />
+      <module name="registry" options="-parameters" />
+    </option>
+  </component>
+</project>

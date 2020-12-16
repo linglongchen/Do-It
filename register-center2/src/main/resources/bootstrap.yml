@@ -1,0 +1,55 @@
+#spring:
+#  cloud:
+#    config:
+#      name: eureka-server2
+#      profile: dev
+#      label: master
+#      uri: http://config:server@www.config.com:10000/
+#      fail-fast: true
+#      retry:
+#        max-attempts: 30
+#        initial-interval: 2000
+#        multiplier: 1.18
+#        max-interval: 30000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://micro:fast@www.register1.com:10002 #和其他注册中心连接
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: www.register2.com
+
+info:
+  app:
+    profiles: dev
+    name: eureka-server2 #从pom.xml中获取
+    description: eureka-server2
+spring:
+  application:
+    name: eureka-server # 实例的名称
+  profiles:
+    active: dev
+  security:
+    user:
+      name: micro
+      password: fast
+server:
+  port: 10004
+  tomcat:
+    uri-encoding: utf-8
+# 健康检查的配置
+management:
+  health:
+    mail:
+      enabled: false
+    redis:
+      enabled: false
+  server:
+    port: 10005
+# 日志配置
+springfox:
+  documentation:
+    swagger:
+      v2:
+        path: /api/api-doc

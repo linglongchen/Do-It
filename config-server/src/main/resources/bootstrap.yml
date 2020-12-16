@@ -1,0 +1,21 @@
+# 程序实例的配置，git仓库的配置
+spring:
+  application:
+    name: config-server
+  cloud:
+      config:
+        server:
+          git:
+            uri: https://gitee.com/chen_moooooom/config-server.git
+            username: cll022034@gmail.com
+            password: CHEN19950220
+eureka:
+  client:
+    service-url:
+      defaultZone: http://micro:fast@www.register1.com:10002/eureka/,http://micro:fast@www.register2.com:10004/eureka/ #配置所有的注册中心
+  instance:
+    hostname: www.config.com
+    appname: config-server
+
+
+

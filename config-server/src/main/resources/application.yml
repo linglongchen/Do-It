@@ -1,0 +1,21 @@
+server:
+  port: 10000
+# 健康检查的相关配置
+management:
+  health:
+    diskspace:
+      enabled: true
+  server:
+    port: 10001
+# info 信息的获取
+info:
+  app:
+    profiles: dev
+    name: "@project.name@" #从pom.xml中获取
+    description: "@project.description@"
+    version: "@project.version@"
+spring:
+  security:
+    user:
+      name: config
+      password: server
